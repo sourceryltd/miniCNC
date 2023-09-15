@@ -1,0 +1,2 @@
+# miniCNC
+Firmware for minCNC 
