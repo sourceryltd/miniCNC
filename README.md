@@ -2,6 +2,7 @@
 The source code of MKS DLC32.
 
 unzip libraries.zip into the current directory 
+rename vscode  directory as  .vscode 
 
 ## Environment construction:
 
