@@ -1,6 +1,8 @@
 # MKS-DLC32-FIRMWARE
 The source code of MKS DLC32.
 
+unzip libraries.zip into the current directory 
+
 ## Environment construction:
 
 - vscode
