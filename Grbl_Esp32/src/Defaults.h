@@ -280,22 +280,22 @@
 // ============ AXIS MAX SPPED =========
 
 #ifndef DEFAULT_X_MAX_RATE
-#    define DEFAULT_X_MAX_RATE 1000.0  // mm/min
+#    define DEFAULT_X_MAX_RATE 2500.0  // mm/min
 #endif
 #ifndef DEFAULT_Y_MAX_RATE
-#    define DEFAULT_Y_MAX_RATE 1000.0  // mm/min
+#    define DEFAULT_Y_MAX_RATE 2500.0  // mm/min
 #endif
 #ifndef DEFAULT_Z_MAX_RATE
-#    define DEFAULT_Z_MAX_RATE 1000.0  // mm/min
+#    define DEFAULT_Z_MAX_RATE 2500.0  // mm/min
 #endif
 #ifndef DEFAULT_A_MAX_RATE
-#    define DEFAULT_A_MAX_RATE 1000.0  // mm/min
+#    define DEFAULT_A_MAX_RATE 2500.0  // mm/min
 #endif
 #ifndef DEFAULT_B_MAX_RATE
-#    define DEFAULT_B_MAX_RATE 1000.0  // mm/min
+#    define DEFAULT_B_MAX_RATE 2500.0  // mm/min
 #endif
 #ifndef DEFAULT_C_MAX_RATE
-#    define DEFAULT_C_MAX_RATE 1000.0  // mm/min
+#    define DEFAULT_C_MAX_RATE 2500.0  // mm/min
 #endif
 
 // ============== Axis Acceleration =========
@@ -323,13 +323,13 @@
 // ========= AXIS MAX TRAVEL ============
 
 #ifndef DEFAULT_X_MAX_TRAVEL
-#    define DEFAULT_X_MAX_TRAVEL 300.0  // $130 mm NOTE: Must be a positive value.
+#    define DEFAULT_X_MAX_TRAVEL 500.0  // $130 mm NOTE: Must be a positive value.
 #endif
 #ifndef DEFAULT_Y_MAX_TRAVEL
-#    define DEFAULT_Y_MAX_TRAVEL 300.0  // mm NOTE: Must be a positive value.
+#    define DEFAULT_Y_MAX_TRAVEL 500.0  // mm NOTE: Must be a positive value.
 #endif
 #ifndef DEFAULT_Z_MAX_TRAVEL
-#    define DEFAULT_Z_MAX_TRAVEL 300.0  // mm NOTE: Must be a positive value.
+#    define DEFAULT_Z_MAX_TRAVEL 120.0  // mm NOTE: Must be a positive value.
 #endif
 #ifndef DEFAULT_A_MAX_TRAVEL
 #    define DEFAULT_A_MAX_TRAVEL 300.0  // mm NOTE: Must be a positive value.
