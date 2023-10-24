@@ -10,27 +10,27 @@
 #define CONTROL_EN              "Control"           
 #define SCULPTURE_EN            "Sculpture"         
 #define TOOL_EN                 "Tool"          
-#define MPOS_EN                 "Mechanical coordinat"          
-#define WPOS_EN                 "Working coordinates"
+#define MPOS_EN                 "Mechanical Coord"          
+#define WPOS_EN                 "Working Coord"
 #define WIFI_CONNECT_EN   	    "Connect"
 #define WIFI_DISCONNECT_EN	    "Disconnect"
 
 /* 控制界面 */
-#define XY_CLEAR_EN             "XY_Clear"
-#define Z_CLEAR_EN              "Z_Clear"
+#define XY_CLEAR_EN             "Clr XY"
+#define Z_CLEAR_EN              "Clr Z"
 #define KNIFE_EN                "Knife"
 #define NEXT_EN                 "Next"
 #define UP_EN                   "Up"
 #define COOLING_EN              "Cooling"
 #define POSITION_EN             "Position"
-#define SPEED_HIGH_EN           "High Speed"
-#define SPEED_MID_EN            "Mid Speed"
-#define SPEED_LOW_EN            "Low Speed"
+#define SPEED_HIGH_EN           "High"
+#define SPEED_MID_EN            "Mid"
+#define SPEED_LOW_EN            "Low"
 #define SPINDLE_EN              "Spindle"
-#define CARVE_EN                "Carve"
+#define CARVE_EN                "Karve"
 
 /* 文件界面 */
-#define DIS_NO_SDCARD_EN        "No SD Card"
+#define DIS_NO_SDCARD_EN        "Insert SD Card"
 
 /* 雕刻界面 */
 #define HOLD_EN                 "Hold"

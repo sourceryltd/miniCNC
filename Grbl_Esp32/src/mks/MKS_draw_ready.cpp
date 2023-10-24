@@ -112,12 +112,14 @@ static void disp_img(void) {
 
 static void disp_label(void) {
 
-    label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Control, ready_src.ready_imgbtn_Control, 0, 0, mc_language.control);
-    label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Sculpture, ready_src.ready_imgbtn_Sculpture, 0, 0, mc_language.sculpture);
-    label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Tool, ready_src.ready_imgbtn_Tool, 0, 0, mc_language.tool);
+    label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Control, ready_src.ready_imgbtn_Control, 0, 0, "Control");
+   //label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Sculpture, ready_src.ready_imgbtn_Sculpture, 0, 0, mc_language.sculpture);
+    label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Sculpture, ready_src.ready_imgbtn_Sculpture, 0, 0, "Karve");
 
-    label_for_text(mks_global.mks_src, ready_src.ready_label_mpos, ready_src.ready_img_mpos, 0, 0, LV_ALIGN_OUT_RIGHT_MID, mc_language.Mpos);
-    label_for_text(mks_global.mks_src, ready_src.ready_label_wpos, ready_src.ready_img_wpos, 0, 0, LV_ALIGN_OUT_RIGHT_MID, mc_language.Wpos);
+    label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Tool, ready_src.ready_imgbtn_Tool, 0, 0, "Settings");
+
+    label_for_text(mks_global.mks_src, ready_src.ready_label_mpos, ready_src.ready_img_mpos, 0, 0, LV_ALIGN_OUT_RIGHT_MID, " Mechanical Coord");
+    label_for_text(mks_global.mks_src, ready_src.ready_label_wpos, ready_src.ready_img_wpos, 0, 0, LV_ALIGN_OUT_RIGHT_MID, " Working Coord");
 
 
     ready_src.ready_label_xpos = label_for_text(mks_global.mks_src,   ready_src.ready_label_xpos, NULL , 40, 86,  LV_ALIGN_IN_TOP_LEFT, "X:0");

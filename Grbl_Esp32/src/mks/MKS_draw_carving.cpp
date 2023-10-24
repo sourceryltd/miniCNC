@@ -315,7 +315,7 @@ void mks_draw_craving(void) {
 	if(state == SDState::NotPresent)
 	{
 		mks_grbl.mks_sd_status = 0;	// no sd insert
-		label_for_screen(mks_global.mks_src, Label_NoFile, 0, 0, "No SD Card");
+		label_for_screen(mks_global.mks_src, Label_NoFile, 0, 0, "Insert SD Card");
 	}else {
 
 		
