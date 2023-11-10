@@ -59,7 +59,7 @@
 #endif
 
 #ifndef DEFAULT_DIRECTION_INVERT_MASK
-#    define DEFAULT_DIRECTION_INVERT_MASK 0  // $3 uint8_
+#    define DEFAULT_DIRECTION_INVERT_MASK 6  // $3 uint8_   - this chaqnges the direction of the stepper motors in operation 
 #endif
 
 #ifndef DEFAULT_INVERT_ST_ENABLE
@@ -280,22 +280,22 @@
 // ============ AXIS MAX SPPED =========
 
 #ifndef DEFAULT_X_MAX_RATE
-#    define DEFAULT_X_MAX_RATE 2500.0  // mm/min
+#    define DEFAULT_X_MAX_RATE 5000.0  // mm/min
 #endif
 #ifndef DEFAULT_Y_MAX_RATE
-#    define DEFAULT_Y_MAX_RATE 2500.0  // mm/min
+#    define DEFAULT_Y_MAX_RATE 5000.0  // mm/min
 #endif
 #ifndef DEFAULT_Z_MAX_RATE
-#    define DEFAULT_Z_MAX_RATE 2500.0  // mm/min
+#    define DEFAULT_Z_MAX_RATE 5000.0  // mm/min
 #endif
 #ifndef DEFAULT_A_MAX_RATE
-#    define DEFAULT_A_MAX_RATE 2500.0  // mm/min
+#    define DEFAULT_A_MAX_RATE 5000.0  // mm/min
 #endif
 #ifndef DEFAULT_B_MAX_RATE
-#    define DEFAULT_B_MAX_RATE 2500.0  // mm/min
+#    define DEFAULT_B_MAX_RATE 5000.0  // mm/min
 #endif
 #ifndef DEFAULT_C_MAX_RATE
-#    define DEFAULT_C_MAX_RATE 2500.0  // mm/min
+#    define DEFAULT_C_MAX_RATE 5000.0  // mm/min
 #endif
 
 // ============== Axis Acceleration =========
