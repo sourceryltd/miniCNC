@@ -453,7 +453,7 @@ static void disp_imgbtn_1(void) {
 
 	move_page.label_xy_clear = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_xy_clear, move_page.xy_clear, 0, 0, "Clr XY");
 	move_page.label_z_clear = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_z_clear, move_page.z_clear, 0, 0, "Clr Z");
-	move_page.label_knife = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_knife, move_page.knife, 0, 0, "Probe");
+	move_page.label_knife = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_knife, move_page.knife, 0, 0, "Z-Probe");
 	move_page.label_next = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_next, move_page.next, 0, 0, "Next");
 }
 
@@ -462,7 +462,7 @@ static void disp_imgbtn_2(void) {
 	move_page.cooling = lv_imgbtn_creat_mks(mks_global.mks_src_1, move_page.cooling, &png_cooling_pre, &png_cooling, LV_ALIGN_IN_TOP_LEFT, 270, 5, set_cooling);
 	move_page.position = lv_imgbtn_creat_mks(mks_global.mks_src_1, move_page.position, &png_position_pre, &png_position, LV_ALIGN_IN_TOP_LEFT, 380, 5, set_xyz_pos);
 
-	move_page.label_cooling = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_cooling, move_page.cooling, 0, 0, "Cooling");
+	move_page.label_cooling = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_cooling, move_page.cooling, 0, 0, "Aux");
 	move_page.label_position = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_position, move_page.position, 0, 0, "Position");
 	move_page.label_up = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_up, move_page.up, 0, 0, "Up");
 }
@@ -622,7 +622,7 @@ void hard_home_check(void) {
 		case HOMING_FAIL:
 			ui_move_ctrl.hard_homing_status = HOMING_NONE;
 			common_pupup_info_del();
-			mks_draw_common_popup_info_com("Info", "Homing fail", "please unlock!", event_henadle_pupup_com);
+			mks_draw_common_popup_info_com("Info", "Homing failed", "please unlock!", event_henadle_pupup_com);
 		break;
 	}
 }
@@ -659,7 +659,7 @@ void soft_home_check(void) {
 			// lv_obj_del(move_popup_scr);
 			ui_move_ctrl.soft_homing_status = HOMING_NONE;
 			common_pupup_info_del();
-			mks_draw_common_popup_info_com("Info", "Homing fail", " ", event_henadle_pupup_com);
+			mks_draw_common_popup_info_com("Info", "Homing failed", " ", event_henadle_pupup_com);
 		break;
 	}
 }
@@ -709,7 +709,7 @@ void probe_check() {
 		
     	case PROBE_SECODN_FAIL:
 			common_pupup_info_del();
-			mks_draw_common_popup_info_com("Info", "Probe fail!", " ", event_henadle_pupup_com);
+			mks_draw_common_popup_info_com("Info", "Probe failed!", " ", event_henadle_pupup_com);
 			probe_run.status = PROBE_NO;
 			probe_run.flag = 0;
 		break;

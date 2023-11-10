@@ -114,7 +114,7 @@ static void disp_label(void) {
 
     label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Control, ready_src.ready_imgbtn_Control, 0, 0, "Control");
    //label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Sculpture, ready_src.ready_imgbtn_Sculpture, 0, 0, mc_language.sculpture);
-    label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Sculpture, ready_src.ready_imgbtn_Sculpture, 0, 0, "Karve");
+    label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Sculpture, ready_src.ready_imgbtn_Sculpture, 0, 0, "SD Card");
 
     label_for_imgbtn_name(mks_global.mks_src_1, ready_src.ready_label_Tool, ready_src.ready_imgbtn_Tool, 0, 0, "Settings");
 

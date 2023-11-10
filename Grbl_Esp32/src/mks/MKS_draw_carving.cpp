@@ -972,7 +972,7 @@ static void event_btn_frame(lv_obj_t* obj, lv_event_t event) {
 		if(file_size >= 1024*1024) {
 			mks_draw_common_popup("Warning!", 
 								"File size is too big",
-								"Do you want to connute?",
+								"Do you want to continue?",
 								event_fram_size_yes,
 								event_fram_size_no);
 		}else {

@@ -106,7 +106,7 @@ void mks_draw_tool(void) {
     //label_for_imgbtn_name(mks_global.mks_src_1, label_tool_language, tool_img_language, 0, 0, "Language");
     
 
-    mks_lvgl_long_sroll_label_with_wight_set_center(mks_global.mks_src, label_board_version, 10, 120, "MakerMade CNC500 v1.1.2  - MKS DLC32", 400);
+    mks_lvgl_long_sroll_label_with_wight_set_center(mks_global.mks_src, label_board_version, 10, 120, "MakerMade MKS DLC32 v1.7a", 400);
 
     //mks_lvgl_long_sroll_label_with_wight_set_center(mks_global.mks_src, label_Firmware_version, 10, 170, FW_NAME, 400);
 
@@ -124,3 +124,22 @@ void mks_clear_tool(void) {
 }
 
 
+void GenerateQR(void)
+{
+    //lv_color_t bg_color = lv_palette_lighten(LV_PALETTE_LIGHT_BLUE, 5);
+    //lv_color_t fg_color = lv_palette_darken(LV_PALETTE_BLUE, 4);
+
+    //lv_obj_t * qr = lv_qrcode_create(lv_screen_active());
+    //lv_qrcode_set_size(qr, 150);
+    //lv_qrcode_set_dark_color(qr, fg_color);
+    //lv_qrcode_set_light_color(qr, bg_color);
+
+    /*Set data*/
+    const char * data = "https://lvgl.io";
+    //lv_qrcode_update(qr, data, strlen(data));
+    //lv_obj_center(qr);
+
+    /*Add a border with bg_color*/
+    //lv_obj_set_style_border_color(qr, bg_color, 0);
+    //lv_obj_set_style_border_width(qr, 5, 0);
+}

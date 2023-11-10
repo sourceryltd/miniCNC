@@ -47,7 +47,7 @@ static void event_handler_suspend(lv_obj_t* obj, lv_event_t event) {
         if(sys.state == State::Hold) {
             lv_imgbtn_set_src(print_src.print_imgbtn_suspend, LV_BTN_STATE_PR, &png_start_pre);
             lv_imgbtn_set_src(print_src.print_imgbtn_suspend, LV_BTN_STATE_REL, &png_start);
-            lv_label_set_static_text(print_src.print_Label_p_suspend, "Star");
+            lv_label_set_static_text(print_src.print_Label_p_suspend, "Start");
             MKS_GRBL_CMD_SEND("~");
             if(print_setting._need_to_start_write) {
                 sys_rt_s_override = print_setting.cur_spindle_pwr;
@@ -65,7 +65,7 @@ static void event_handler_suspend(lv_obj_t* obj, lv_event_t event) {
 
 static void event_handler_stop(lv_obj_t* obj, lv_event_t event) {
     if (event == LV_EVENT_RELEASED) {
-        mks_draw_print_popup("Do you want to stop print?");
+        mks_draw_print_popup("End current Job?");
     }
 }
 
@@ -140,7 +140,7 @@ void mks_draw_print(void) {
 
     print_src.print_Label_p_suspend = label_for_imgbtn_name_mid(mks_global.mks_src, print_src.print_Label_p_suspend, print_src.print_imgbtn_suspend ,-35 ,0 ,"Pause");
     print_src.print_Label_p_stop = label_for_imgbtn_name_mid(mks_global.mks_src, print_src.print_Label_p_stop, print_src.print_imgbtn_stop ,-40 ,0 ,"Stop");
-    print_src.print_Label_p_adj = label_for_imgbtn_name_mid(mks_global.mks_src, print_src.print_Label_p_adj, print_src.print_imgbtn_adj ,-20 ,0 ,"Adjustment");
+    print_src.print_Label_p_adj = label_for_imgbtn_name_mid(mks_global.mks_src, print_src.print_Label_p_adj, print_src.print_imgbtn_adj ,-20 ,0 ,"Adjust");
     
 
 
@@ -276,8 +276,8 @@ void mks_draw_finsh_pupop(void) {
     lv_btn_set_style(btn_finsh_popup_sure, LV_BTN_STYLE_REL, &print_src.print_popup_btn_style);
     lv_btn_set_style(btn_finsh_popup_sure,LV_BTN_STYLE_PR,&print_src.print_popup_btn_style);
 
-    label_for_btn_name(btn_finsh_popup_sure, print_src.print_Label_popup_sure, 0, 0, "Yes");
-    label_for_screen(print_src.print_finsh_popup, print_src.print_Label_popup, 0, -20, "File is print done!");
+    label_for_btn_name(btn_finsh_popup_sure, print_src.print_Label_popup_sure, 0, 0, "OK");
+    label_for_screen(print_src.print_finsh_popup, print_src.print_Label_popup, 0, -20, "Job Finished!");
 }
 
 char bar_percen_str[20];
