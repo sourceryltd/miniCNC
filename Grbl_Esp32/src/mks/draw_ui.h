@@ -93,6 +93,8 @@ LV_IMG_DECLARE(png_l_up_pre);
 LV_IMG_DECLARE(png_l_next);		
 LV_IMG_DECLARE(png_l_next_pre);
 
+LV_IMG_DECLARE(png_hhome);		   // add Hhome  and HHome_pre  image declarations
+LV_IMG_DECLARE(png_hhome_pre);
 
 void mks_global_style_init(void);
 

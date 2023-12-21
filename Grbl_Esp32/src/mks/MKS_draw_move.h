@@ -43,6 +43,7 @@ typedef struct {
     lv_obj_t* position;
     lv_obj_t* next;
     lv_obj_t* up;
+    lv_obj_t* hhome;        // added object for HHome image btn
 
     lv_obj_t* x_n;			//+
     lv_obj_t* x_p;			//-
@@ -67,6 +68,7 @@ typedef struct {
 
     lv_obj_t* label_xy_clear;
     lv_obj_t* label_z_clear;
+    lv_obj_t* label_hhome;
     lv_obj_t* label_cooling;
     lv_obj_t* label_knife;
     lv_obj_t* label_position;

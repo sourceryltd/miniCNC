@@ -100,6 +100,7 @@ lv_obj_t* mks_lvgl_img_set(lv_obj_t *scr ,lv_obj_t *img, const void * src_img, l
 lv_obj_t* lv_imgbtn_img_set(lv_obj_t *scr, lv_obj_t *imgbtn, const void * img_pr, const void * img_rel);
 lv_obj_t* mks_lvgl_img_set_algin(lv_obj_t *scr ,lv_obj_t *img, const void * src_img, lv_align_t align, lv_coord_t x_mod, lv_coord_t y_mod);
 
+// lv_imgbtn_creat_mks(ScreenID, imgBtn, img_pr, img_rel, align, x_mod, y_mod, callbackEvent)
 
 lv_obj_t* lv_imgbtn_creat_mks(lv_obj_t *scr ,lv_obj_t *imgbtn, const void * img_pr, const void * img_rel, lv_align_t align, lv_coord_t x_mod, lv_coord_t y_mod, lv_event_cb_t event_cb);
 lv_obj_t* lv_imgbtn_img_set(lv_obj_t *imgbtn, const void * img_pr, const void * img_rel);

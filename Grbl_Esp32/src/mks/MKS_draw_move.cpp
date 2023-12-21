@@ -50,6 +50,7 @@ static uint8_t get_event(lv_obj_t* obj) {
     else if (obj == move_page.m_unlock)     	return ID_M_UNLOCK;
 	else if (obj == move_page.xy_home)     		return ID_M_XY_HOME;
 	else if (obj == move_page.z_home)     		return ID_M_Z_HOME;
+	else if (obj == move_page.hhome)     		return ID_M_HHOME;	  // added hhome
 	else if (obj == move_page.Back)     		return ID_M_BACK;
 	else if (obj == move_page.btn_len)     		return ID_M_STEP;
 	else if (obj == move_page.btn_speed)		return ID_M_SPEED;
@@ -89,6 +90,27 @@ static void set_cooling(lv_obj_t* obj, lv_event_t event) {
 		else{
 			MKS_GRBL_CMD_SEND("M8\n");
 		}
+	}
+}
+
+static void set_hhome(void) {
+
+	MKS_GRBL_CMD_SEND("M5\n");
+	mks_grbl.power_persen = P_0_PERSEN;
+
+	if(mks_ui_page.mks_ui_page == MKS_UI_Control) {
+		
+	}
+
+	set_click_status(false);
+
+	if(hard_limits->get() && homing_enable->get()) {
+		MKS_GRBL_CMD_SEND("$H\n");
+		ui_move_ctrl.hard_homing_status = HOMING_START;
+		mks_draw_common_pupup_info("Info", "Homing...", " ");
+	}
+	else {
+		mks_draw_common_popup_info_com("Warning", "Hard Homing not enabled...", " ", event_henadle_pupup_com);
 	}
 }
 
@@ -247,28 +269,6 @@ static void set_knife() {
 	}else {
 		set_click_status(true);
 		mks_draw_common_popup_info_com("Info", "Setting error!", "Please set $6=1!", event_henadle_pupup_com);
-	}
-}
-
-
-static void set_hhome(void) {
-
-	MKS_GRBL_CMD_SEND("M5\n");
-	mks_grbl.power_persen = P_0_PERSEN;
-
-	if(mks_ui_page.mks_ui_page == MKS_UI_Control) {
-		
-	}
-
-	set_click_status(false);
-
-	if(hard_limits->get() && homing_enable->get()) {
-		MKS_GRBL_CMD_SEND("$H\n");
-		ui_move_ctrl.hard_homing_status = HOMING_START;
-		mks_draw_common_pupup_info("Info", "Homing...", " ");
-	}
-	else {
-		mks_draw_common_popup_info_com("Warning", "Hard Homing not enabled...", " ", event_henadle_pupup_com);
 	}
 }
 
@@ -459,10 +459,20 @@ static void disp_imgbtn_1(void) {
 
 static void disp_imgbtn_2(void) {
 	move_page.up = lv_imgbtn_creat_mks(mks_global.mks_src_1, move_page.up, &png_l_up_pre, &png_l_up, LV_ALIGN_IN_TOP_LEFT, 170, 5, disp_up_set);
-	move_page.cooling = lv_imgbtn_creat_mks(mks_global.mks_src_1, move_page.cooling, &png_cooling_pre, &png_cooling, LV_ALIGN_IN_TOP_LEFT, 270, 5, set_cooling);
+	
+	move_page.cooling = lv_imgbtn_creat_mks(mks_global.mks_src_1, move_page.cooling, &png_cooling_pre, &png_cooling, LV_ALIGN_IN_TOP_LEFT, 240, 5, set_cooling);
+	
+	// problems:
+	// set_hhome()  is void  but the callback struct wants objects 
+	
+	move_page.hhome = lv_imgbtn_creat_mks(mks_global.mks_src_1, move_page.hhome, &png_hhome, &png_hhome_pre, LV_ALIGN_IN_TOP_LEFT, 310, 5, event_handler);
+	
 	move_page.position = lv_imgbtn_creat_mks(mks_global.mks_src_1, move_page.position, &png_position_pre, &png_position, LV_ALIGN_IN_TOP_LEFT, 380, 5, set_xyz_pos);
 
 	move_page.label_cooling = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_cooling, move_page.cooling, 0, 0, "Aux");
+	
+	// add Hard Home Button label
+    move_page.label_hhome = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_hhome, move_page.hhome, 0, 0, "HHome");
 	move_page.label_position = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_position, move_page.position, 0, 0, "Position");
 	move_page.label_up = label_for_imgbtn_name(mks_global.mks_src_1, move_page.label_up, move_page.up, 0, 0, "Up");
 }
